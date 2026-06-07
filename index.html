@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación Lineal: ¡Maximiza tu Negocio Escolar!</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #27ae60;
+            --background: #f4f7f6;
+            --text-color: #333;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--background);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .pasos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .paso-card {
+            background: var(--background);
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .formula {
+            background-color: #e8f4f8;
+            padding: 1rem;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 1.1rem;
+            text-align: center;
+            display: block;
+            margin: 1rem 0;
+        }
+
+        .actividad {
+            background-color: #eafaf1;
+            border: 2px dashed var(--secondary-color);
+        }
+
+        input[type="number"] {
+            padding: 0.5rem;
+            width: 80px;
+            margin: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #219a52;
+        }
+
+        #resultado-actividad {
+            margin-top: 1rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Pensamiento Matemático II</h1>
+        <p>Introducción a la Programación Lineal aplicada a los Negocios</p>
+    </header>
+
+    <div class="container">
+        
+        <section id="definicion">
+            <h2>¿Qué es la Programación Lineal?</h2>
+            <p>La <strong>programación lineal</strong> es una técnica matemática que nos ayuda a tomar las mejores decisiones posibles (como ganar la mayor cantidad de dinero o gastar lo menos posible) cuando tenemos recursos limitados (como poco tiempo, dinero o ingredientes).</p>
+            <p>En el mundo real, no podemos producir infinitamente porque tenemos restricciones. Esta técnica nos permite encontrar el punto exacto de producción para alcanzar nuestro objetivo.</p>
+        </section>
+
+        <section id="pasos">
+            <h2>Explicación Paso a Paso</h2>
+            <div class="pasos-grid">
+                <div class="paso-card">
+                    <h3>1. Define las variables</h3>
+                    <p>Identifica qué es lo que vas a decidir o producir. Generalmente se representan con <strong>x</strong> e <strong>y</strong>.</p>
+                </div>
+                <div class="paso-card">
+                    <h3>2. Función Objetivo</h3>
+                    <p>Es la ecuación que representa tu meta (Z). ¿Quieres maximizar ganancias o minimizar costos?</p>
+                </div>
+                <div class="paso-card">
+                    <h3>3. Restricciones</h3>
+                    <p>Son las limitaciones de tus recursos. Se escriben como inecuaciones matemáticas (≤ o ≥).</p>
+                </div>
+                <div class="paso-card">
+                    <h3>4. Grafica y Resuelve</h3>
+                    <p>Dibuja las restricciones en un plano cartesiano, encuentra la región posible y evalúa los vértices (esquinas) en tu función objetivo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ejemplo">
+            <h2>Ejemplo Resuelto: El Negocio de Postres</h2>
+            <p>Imagina que quieres vender Brownies y Galletas en la escuela. Tienes en tu casa <strong>2000 gramos de harina</strong> y <strong>1500 gramos de azúcar</strong>.</p>
+            <ul>
+                <li>Cada <strong>Brownie (x)</strong> necesita 100g de harina y 50g de azúcar. Te deja una ganancia de <strong>$15 MXN</strong>.</li>
+                <li>Cada <strong>Galleta (y)</strong> necesita 50g de harina y 50g de azúcar. Te deja una ganancia de <strong>$10 MXN</strong>.</li>
+            </ul>
+            <p>¿Cuántos brownies y galletas debes hacer para ganar lo máximo posible sin que te falten ingredientes?</p>
+            
+            <p><strong>Función Objetivo (Maximizar Ganancia):</strong></p>
+            <span class="formula">Z = 15x + 10y</span>
+
+            <p><strong>Restricciones:</strong></p>
+            <ul>
+                <li>Harina: <code>100x + 50y ≤ 2000</code></li>
+                <li>Azúcar: <code>50x + 50y ≤ 1500</code></li>
+                <li>No negatividad: <code>x ≥ 0, y ≥ 0</code> (No puedes hacer postres negativos).</li>
+            </ul>
+
+            <p><strong>Solución:</strong><br>
+            Al graficar, los vértices de nuestra área de soluciones posibles son (0,0), (0,30), (20,0) y el punto donde se cruzan las líneas que es <strong>(10, 20)</strong>.<br>
+            Si hacemos 10 brownies y 20 galletas, usamos toda la harina y el azúcar. La ganancia es:<br>
+            Z = 15(10) + 10(20) = 150 + 200 = <strong>$350 MXN</strong>. ¡Esa es la ganancia máxima!</p>
+        </section>
+
+        <section class="actividad" id="actividad">
+            <h2>Actividad: ¡Juega a ser el gerente!</h2>
+            <p>Usa la calculadora de abajo para probar distintas cantidades de brownies y galletas. Intenta superar los $350 de ganancia... pero cuidado, ¡si te pasas de los ingredientes (2000g de harina o 1500g de azúcar), tu producción fallará!</p>
+            
+            <div>
+                <label for="brownies">Cantidad de Brownies (x):</label>
+                <input type="number" id="brownies" value="0" min="0">
+                <br>
+                <label for="galletas">Cantidad de Galletas (y):</label>
+                <input type="number" id="galletas" value="0" min="0">
+                <br><br>
+                <button onclick="calcularProduccion()">Calcular Ganancia</button>
+            </div>
+            
+            <div id="resultado-actividad"></div>
+        </section>
+
+        <section id="aplicacion">
+            <h2>Aplicaciones Cotidianas</h2>
+            <p>La programación lineal no solo sirve para vender postres. En la vida real la utilizan:</p>
+            <ul>
+                <li><strong>Empresas de logística (como Amazon o FedEx):</strong> Para decidir las rutas más cortas de entrega gastando la menor cantidad de gasolina.</li>
+                <li><strong>Hospitales:</strong> Para asignar turnos a médicos y enfermeras asegurando cobertura 24/7 al menor costo.</li>
+                <li><strong>Agricultura:</strong> Para decidir cuántas hectáreas sembrar de maíz o trigo dependiendo del agua disponible y el precio del mercado.</li>
+            </ul>
+        </section>
+
+        <section id="fuentes">
+            <h2>Fuentes y Referencias</h2>
+            <ul>
+                <li>Dirección General de Bachillerato (DGB), SEP - <em>Programa de Estudio de Pensamiento Matemático II</em>.</li>
+                <li>Swokowski, E. W. (2011). <em>Álgebra y trigonometría con geometría analítica</em>. Cengage Learning.</li>
+                <li>Taha, H. A. (2012). <em>Investigación de operaciones</em>. Pearson Educación.</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Material diseñado para estudiantes de nivel medio superior. Pensamiento Matemático II.</p>
+    </footer>
+
+    <script>
+        function calcularProduccion() {
+            // Obtener los valores ingresados
+            let x = parseInt(document.getElementById('brownies').value) || 0;
+            let y = parseInt(document.getElementById('galletas').value) || 0;
+            let resultadoDiv = document.getElementById('resultado-actividad');
+
+            // Restricciones de ingredientes
+            let harinaUsada = (100 * x) + (50 * y);
+            let azucarUsada = (50 * x) + (50 * y);
+
+            if (x < 0 || y < 0) {
+                resultadoDiv.innerHTML = "Error: No puedes producir cantidades negativas.";
+                resultadoDiv.style.color = "red";
+                return;
+            }
+
+            // Verificar si cumple las restricciones
+            if (harinaUsada > 2000 || azucarUsada > 1500) {
+                resultadoDiv.innerHTML = "❌ ¡Te pasaste de ingredientes! <br>" +
+                                         "Usaste " + harinaUsada + "g de harina (Máx 2000g) y " + 
+                                         azucarUsada + "g de azúcar (Máx 1500g). <br>" +
+                                         "Ajusta las cantidades y vuelve a intentar.";
+                resultadoDiv.style.color = "#c0392b";
+            } else {
+                // Calcular función objetivo (ganancia)
+                let ganancia = (15 * x) + (10 * y);
+                resultadoDiv.innerHTML = "✅ ¡Producción exitosa! <br>" +
+                                         "Usaste " + harinaUsada + "g de harina y " + azucarUsada + "g de azúcar. <br>" +
+                                         "Tu ganancia estimada es de: <strong>$" + ganancia + " MXN</strong>.";
+                resultadoDiv.style.color = "#27ae60";
+            }
+        }
+    </script>
+</body>
+</html>
